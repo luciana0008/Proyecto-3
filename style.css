@@ -1,0 +1,339 @@
+@font-face {
+  font-family: "Fraunces";
+  src: url("./assets/fonts/fraunces/Fraunces_144pt-SemiBold.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("./assets/fonts/manrope/Manrope-VariableFont_wght.ttf")
+    format("truetype");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+ul,
+ol {
+  list-style: none;
+}
+button {
+  border: none;
+  outline: none;
+}
+a {
+  text-decoration: none;
+}
+image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 680px;
+  margin: 0 auto;
+}
+.container.column {
+  flex-direction: column;
+}
+.container--about {
+  flex-direction: column;
+}
+.container--services {
+  flex-direction: column;
+}
+header {
+  padding-top: 32px;
+  background-color: #24053e;
+}
+
+.btn {
+  font-family: "Manrope";
+  font-weight: 700;
+  line-height: 1.8;
+}
+.btn--primary {
+  font-size: 16px;
+  color: #24053e;
+  background-color: #44ffa1;
+  padding: 12px 32px;
+}
+.btn--secondary {
+  font-size: 18px;
+  color: #fff;
+  background-color: transparent;
+  border-bottom: 3px solid #44ffa1;
+}
+
+.hero {
+  position: relative;
+  padding-top: 56px;
+  background-color: #24053e;
+  padding-bottom: calc(168px + 32 * (100vw - 375px) / 393);
+}
+.hero--title {
+  font-family: "Fraunces";
+  font-size: 48px;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 40px;
+}
+.hero--title span {
+  border-bottom: 3px solid #44ffa1;
+}
+.hero--image {
+  position: absolute;
+  bottom: calc(-60px - 65 * (100vw - 375px) / 393);
+  width: calc(300px + 180 * (100vw - 375px) / 393);
+  z-index: 1;
+}
+.hero--ornamental--image {
+  position: absolute;
+  bottom: 0;
+  height: 24px;
+  width: 100%;
+}
+.hero--left--ornamental,
+.hero--right--ornamental {
+  display: none;
+}
+.services {
+  position: relative;
+  text-align: center;
+  padding-block: 144px 88px;
+  background-color: #fcf8ff;
+}
+.service--number {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #584d62;
+  font-family: "Fraunces";
+  font-size: 20px;
+  color: #24053e;
+  border-radius: 50%;
+}
+.service--title {
+  font-family: "Fraunces";
+  font-size: 24px;
+  font-weight: 600;
+  color: #24053e;
+  margin-block: 24px 16px;
+}
+.service--desc {
+  font-family: "Manrope";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #24053e;
+}
+.service {
+  margin-bottom: 32px;
+}
+.service:not(:last-child) {
+  margin-bottom: 32px;
+}
+.service--ornamental--image {
+  position: absolute;
+  bottom: 0;
+  height: 24px;
+}
+.about {
+  position: relative;
+  padding-top: 112px;
+}
+.about imge {
+  width: 280;
+}
+.about--content {
+  padding: 32px;
+  background-color: #24053e;
+  color: #fff;
+  text-align: center;
+  margin-top: -48px;
+}
+.about--title {
+  font-family: "Fraunces";
+  font-size: 32px;
+  font-weight: 600;
+}
+.about--paragraph {
+  font-size: 16px;
+  font-family: "Manrope";
+  font-weight: 400;
+  line-height: 1.8;
+  margin-block: 32px;
+}
+.about--bottom--ornamental {
+  display: none;
+}
+footer {
+  padding-block: 80px;
+}
+.social--icons {
+  margin-top: 56px;
+}
+.social--icon {
+  margin-inline: 24px;
+  color: #584d62;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    padding-bottom: 200px;
+  }
+  .hero--title {
+    font-size: 60px;
+  }
+  .btn--primary {
+    font-size: 18px;
+  }
+  .hero--image {
+    bottom: -127px;
+    width: 480px;
+  }
+  .hero--ornamental--image {
+    height: 56px;
+  }
+  .hero--left--ornamental {
+    position: absolute;
+    top: 10px;
+    left: -181px;
+    display: block;
+  }
+  .hero--right--ornamental {
+    position: absolute;
+    top: 195;
+    bottom: 0;
+    right: -93;
+    display: block;
+  }
+  .services {
+    padding-block: 192px 116px;
+  }
+  .service {
+    display: flex;
+    align-items: center;
+    gap: 56px;
+  }
+  .service--number {
+    flex-shrink: 0;
+    font-size: 24px;
+  }
+  .service--title {
+    margin-top: 0;
+    margin-block: 0px 28px;
+    font-size: 28px;
+  }
+  .service--content {
+    text-align: left;
+  }
+  .service--ornamental--image {
+    height: 72px;
+  }
+  .container--about {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .about--content {
+    padding: 48px;
+    margin-block: 168px 0px;
+    margin-left: -104px;
+    font-size: 48px;
+    text-align: left;
+  }
+  .about--title {
+    font-size: 48px;
+  }
+  .about--bottom--ornamental {
+    position: absolute;
+    right: 71px;
+    bottom: -120px;
+    display: block;
+  }
+}
+@media screen and (min-width: 1240px) {
+  header {
+    padding-top: 56px;
+  }
+  .hero {
+    padding-bottom: 368px;
+  }
+  .hero--title {
+    font-size: 80px;
+  }
+  .hero--image {
+    bottom: -147px;
+    width: 715px;
+  }
+  .hero--left--ornamental {
+    top: 62px;
+    left: 5px;
+  }
+  .hero--right--ornametal {
+    right: -30;
+  }
+  .container {
+    max-width: 1100px;
+  }
+  .hero--ornamental--image {
+    height: 72px;
+    width: 100%;
+  }
+  .services {
+    padding-block: 249px 216px;
+  }
+  .container--services {
+    flex-direction: row;
+    gap: 32px;
+  }
+  .service {
+    flex-direction: column;
+    margin: 0;
+  }
+  .service--number {
+    font-size: 24px;
+    width: 56px;
+    height: 56px;
+  }
+  .service--title {
+    font-size: 32px;
+  }
+  .service--desc {
+    font-size: 18px;
+  }
+  .service:not(:last-child) {
+    margin: 0;
+  }
+  .service--content {
+    text-align: center;
+  }
+  .about--image {
+    width: 380px;
+  }
+  .about--content {
+    padding: 64px;
+    margin-left: -87px;
+  }
+  .about--title {
+    font-size: 56px;
+  }
+  .about--paragraph {
+    font-size: 18px;
+  }
+  .about--bottom--ornamental {
+    right: 136px;
+    bottom: -65px;
+  }
+}
